@@ -1,0 +1,6 @@
+name,age,salary,city
+Alice,25,50000,Mumbai
+Bob,30,60000,Delhi
+Charlie,,75000,Bangalore
+Diana,28,,Chennai
+Eve,35,90000,Mumbai
