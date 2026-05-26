@@ -1,5 +1,7 @@
 import pandas as pd
 import math
+from sqlalchemy.orm import Session
+from app.models import Dataset
 
 def clean_nan(obj):
     """
@@ -14,7 +16,7 @@ def clean_nan(obj):
         return [clean_nan(i) for i in obj]
     return obj
 
-def analyze_csv(file_bytes: bytes, filename: str) -> dict:
+def analyze_csv(file_bytes: bytes, filename: str, db: Session) -> dict:
     from io import BytesIO
     df = pd.read_csv(BytesIO(file_bytes))
 
@@ -32,7 +34,18 @@ def analyze_csv(file_bytes: bytes, filename: str) -> dict:
     stats = clean_nan(df.describe().round(2).to_dict())
     preview = clean_nan(df.head(5).to_dict(orient="records"))
 
+    # Save dataset metadata to MySQL
+    dataset_record = Dataset(
+        filename=filename,
+        rows_count=rows,
+        columns_count=cols
+    )
+    db.add(dataset_record)
+    db.commit()
+    db.refresh(dataset_record)
+
     return {
+        "id": dataset_record.id,
         "filename": filename,
         "rows": rows,
         "columns": cols,

@@ -1,5 +1,10 @@
 from fastapi import FastAPI
+from app.database import engine
+from app import models
 from app.routers import upload
+
+# Create all tables in MySQL on startup
+models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="InsightForge AI",
