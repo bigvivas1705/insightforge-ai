@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from app.database import engine
 from app import models
 from app.routers import upload
+from app.routers import predict
 
 # Create all tables in MySQL on startup
 models.Base.metadata.create_all(bind=engine)
@@ -14,6 +15,7 @@ app = FastAPI(
 
 # Register routers
 app.include_router(upload.router, tags=["Data Upload"])
+app.include_router(predict.router, tags=["ML Models"])
 
 @app.get("/")
 def root():
