@@ -1,9 +1,9 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from app.database import engine
 from app import models
 from app.routers import upload, predict, auth
 
-# Create all tables in MySQL on startup
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
@@ -12,7 +12,15 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Register routers
+# Allow React frontend to talk to FastAPI backend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.include_router(upload.router, tags=["Data Upload"])
 app.include_router(predict.router, tags=["ML Models"])
 app.include_router(auth.router, tags=["Authentication"])
