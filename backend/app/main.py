@@ -15,7 +15,10 @@ app = FastAPI(
 # Allow React frontend to talk to FastAPI backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://secure-charm-production-0b55.up.railway.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
