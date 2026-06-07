@@ -17,7 +17,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://secure-charm-production-0b55.up.railway.app"
+        "https://secure-charm-production-0b55.up.railway.app",
+        "https://insightforge-ai.up.railway.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
