@@ -1,13 +1,12 @@
 import axios from 'axios'
 
 const client = axios.create({
-  baseURL: 'http://127.0.0.1:8000',
+  baseURL: import.meta.env.VITE_API_URL || 'https://insightforge-ai-production.up.railway.app',
   headers: {
     'Content-Type': 'application/json'
   }
 })
 
-// Automatically attach JWT token to every request if it exists
 client.interceptors.request.use((config) => {
   const token = localStorage.getItem('token')
   if (token) {
