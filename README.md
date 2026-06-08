@@ -37,29 +37,32 @@ An industrial-grade AI/Data Science Analytics Platform built with a production-s
 ---
 
 ## 🏗️ Architecture
+
+```
 insightforge-ai/
 ├── backend/
 │   ├── app/
-│   │   ├── main.py          # FastAPI app entry point
-│   │   ├── database.py      # SQLAlchemy engine and session
-│   │   ├── models.py        # Database models (User, Dataset)
-│   │   ├── auth.py          # JWT and bcrypt logic
+│   │   ├── main.py
+│   │   ├── database.py
+│   │   ├── models.py
+│   │   ├── auth.py
 │   │   ├── routers/
-│   │   │   ├── upload.py    # CSV upload endpoints
-│   │   │   ├── predict.py   # ML prediction endpoints
-│   │   │   └── auth.py      # Auth endpoints
+│   │   │   ├── upload.py
+│   │   │   ├── predict.py
+│   │   │   └── auth.py
 │   │   └── services/
-│   │       ├── analytics.py # pandas data processing
-│   │       └── ml.py        # scikit-learn ML logic
+│   │       ├── analytics.py
+│   │       └── ml.py
 │   ├── Dockerfile
 │   └── requirements.txt
 ├── frontend/
 │   ├── src/
-│   │   ├── pages/           # Login, Register, Dashboard, Upload, Predict
-│   │   ├── api/             # Axios client
+│   │   ├── pages/
+│   │   ├── api/
 │   │   └── main.jsx
 │   └── Dockerfile
 └── docker-compose.yml
+```
 ---
 
 ## 🚀 API Endpoints
