@@ -128,7 +128,7 @@ Linear Regression model with R² score gauge, MSE card, and predicted values bar
 
 **Vivaswaan Nanda**
 - GitHub: [@bigvivas1705](https://github.com/bigvivas1705)
-- LinkedIn: [your linkedin url]
+- LinkedIn: [Vivaswan Nanda](https://www.linkedin.com/in/vivaswan-nanda/)
 
 ---
 
