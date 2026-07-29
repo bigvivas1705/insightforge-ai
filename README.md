@@ -1,20 +1,18 @@
-# InsightForge AI 🔮
+# InsightForge AI 
 
 An industrial-grade AI/Data Science Analytics Platform built with a production-style full-stack architecture. Upload datasets, run analytics, and generate ML predictions — all through a clean, modern dashboard.
 
-🌐 **Live Demo:** [insightforge-ai.up.railway.app](https://insightforge-ai.up.railway.app)
+**Live Demo:** [insightforge-ai.up.railway.app](https://insightforge-ai.up.railway.app)
 
----
 
-## ✨ Features
+##Features
 
-- 📁 **CSV Upload & Analytics** — Upload any dataset and instantly get descriptive statistics, missing value detection, and column summaries
-- 🤖 **ML Predictions** — Train a Linear Regression model on your data and visualize predictions with interactive charts
-- 🔐 **JWT Authentication** — Secure register/login system with bcrypt password hashing
-- 📊 **Interactive Dashboard** — Real-time stats, animated counters, and dataset history
-- ☁️ **Cloud Deployed** — Fully live on Railway with a production MySQL database
+- **CSV Upload & Analytics** — Upload any dataset and instantly get descriptive statistics, missing value detection, and column summaries
+- **ML Predictions** — Train a Linear Regression model on your data and visualize predictions with interactive charts
+- **JWT Authentication** — Secure register/login system with bcrypt password hashing
+- **Interactive Dashboard** — Real-time stats, animated counters, and dataset history
+- **Cloud Deployed** — Fully live on Railway with a production MySQL database
 
----
 
 ## 🛠️ Tech Stack
 
@@ -36,7 +34,7 @@ An industrial-grade AI/Data Science Analytics Platform built with a production-s
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 insightforge-ai/
@@ -65,19 +63,19 @@ insightforge-ai/
 ```
 ---
 
-## 🚀 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description | Auth |
 |--------|----------|-------------|------|
-| POST | `/auth/register` | Create a new account | ❌ |
-| POST | `/auth/login` | Login and get JWT token | ❌ |
-| POST | `/upload` | Upload CSV and get analytics | ✅ |
-| GET | `/datasets` | Get all uploaded datasets | ✅ |
-| POST | `/predict` | Run ML prediction on CSV | ✅ |
+| POST | `/auth/register` | Create a new account | 
+| POST | `/auth/login` | Login and get JWT token | 
+| POST | `/upload` | Upload CSV and get analytics | 
+| GET | `/datasets` | Get all uploaded datasets | 
+| POST | `/predict` | Run ML prediction on CSV | 
 
 ---
 
-## 🖥️ Running Locally
+## Running Locally
 
 ### Prerequisites
 - Python 3.11+
@@ -108,7 +106,7 @@ docker-compose up --build
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Login Page
 Clean, modern authentication with navy + purple theme.
@@ -124,7 +122,7 @@ Linear Regression model with R² score gauge, MSE card, and predicted values bar
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Vivaswaan Nanda**
 - GitHub: [@bigvivas1705](https://github.com/bigvivas1705)
@@ -132,6 +130,6 @@ Linear Regression model with R² score gauge, MSE card, and predicted values bar
 
 ---
 
-## 📄 License
+## License
 
 MIT License
