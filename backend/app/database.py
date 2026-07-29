@@ -9,7 +9,12 @@ DATABASE_URL = os.getenv(
     "mysql+pymysql://root:@localhost:3306/insightforge_db"
 )
 
-engine = create_engine(DATABASE_URL)
+# Aiven requires SSL — enable it via connect_args for pymysql
+connect_args = {}
+if "aivencloud.com" in DATABASE_URL:
+    connect_args = {"ssl": {"ssl": {}}}
+
+engine = create_engine(DATABASE_URL, connect_args=connect_args)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
