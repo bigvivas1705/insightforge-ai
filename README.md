@@ -2,7 +2,7 @@
 
 An industrial-grade AI/Data Science Analytics Platform built with a production-style full-stack architecture. Upload datasets, run analytics, and generate ML predictions — all through a clean, modern dashboard.
 
-**Live Demo:** [insightforge-ai.up.railway.app](https://insightforge-ai.up.railway.app)
+**Live Demo:** [https://insightforge-ai-tau.vercel.app](https://insightforge-ai-tau.vercel.app)
 
 
 ##Features
@@ -124,7 +124,7 @@ Linear Regression model with R² score gauge, MSE card, and predicted values bar
 
 ## Author
 
-**Vivaswaan Nanda**
+**Vivaswan Nanda**
 - GitHub: [@bigvivas1705](https://github.com/bigvivas1705)
 - LinkedIn: [Vivaswan Nanda](https://www.linkedin.com/in/vivaswan-nanda/)
 
